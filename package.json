@@ -11,8 +11,8 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --mode production",
-    "dev": "start-storybook -p 5000",
-    "storybook:export": "build-storybook"
+    "storybook": "start-storybook -p 5000",
+    "storybook:build": "build-storybook"
   },
   "peerDependencies": {
     "react": ">=16.8.x",
