@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Container = styled.div`
+const Box = styled.div`
   height: 400px;
   width: 400px;
   border: 1px solid #CCC;
@@ -9,4 +9,4 @@ const Container = styled.div`
   text-align: center;
 `;
 
-export default Container;
+export default Box;

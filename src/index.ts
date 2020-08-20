@@ -1,3 +1,3 @@
-import Medication from './containers/Medication/Medication';
+import MedContainer from './containers/MedContainer/MedContainer';
 
-export { Medication };
+export { MedContainer };

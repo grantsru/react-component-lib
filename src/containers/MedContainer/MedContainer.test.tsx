@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { render } from '@testing-library/react';
 
-import Medication from './Medication';
+import MedContainer from './MedContainer';
 
 describe('Button', () => {
-  const renderComponent = () => render(<Medication />);
+  const renderComponent = () => render(<MedContainer />);
 
   it('should successfully render a element', () => {
     const { getByTestId } = renderComponent();

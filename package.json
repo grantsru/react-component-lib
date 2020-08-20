@@ -2,13 +2,16 @@
   "name": "react-component-lib",
   "version": "1.0.0",
   "description": "A React component library built with Webpack, TypeScript and Jest",
+  "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "license": "MIT",
+  "engines": {
+    "node": ">=10.x"
+  },
   "scripts": {
     "dev": "start-storybook -p 5000",
     "test": "jest",
