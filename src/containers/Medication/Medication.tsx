@@ -1,18 +1,18 @@
 import React from 'react';
 
-import Container from "../../components/Container/Container";
-import Header from "../../components/Header/Header";
-import MedForm from "../MedForm/MedForm";
-import MedSearch from "../MedSearch/MedSearch";
+import Container from '../../components/Container/Container';
+import Header from '../../components/Header/Header';
+import MedForm from '../MedForm/MedForm';
+import MedSearch from '../MedSearch/MedSearch';
 
-import MedicationService from "../../services/medication.service";
+import MedicationService from '../../services/medication.service';
 
-import { MedSelection } from "../../global";
+import { MedSelection } from '../../global';
 
 const Medication: React.FC<{}> = () => {
   const [activeMedication, setActiveMedication] = React.useState(null);
 
-  const medicationService = new MedicationService;
+  const medicationService = new MedicationService();
 
   async function handleMedicationChange(medication: MedSelection): Promise<void> {
     try {
@@ -37,7 +37,7 @@ const Medication: React.FC<{}> = () => {
 
   return (
     <Container>
-      <Header title='Medication Form' />
+      <Header title="Medication Form" />
       <MedSearch onMedicationChange={handleMedicationChange} />
       <MedForm activeMedication={activeMedication} onSubmit={handleFormSubmit} />
     </Container>

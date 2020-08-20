@@ -1,13 +1,15 @@
 import React from 'react';
 import { useFormik } from 'formik';
 
-import Button from "../../components/Button/Button";
-import Input from "../../components/Input/Input";
+import Button from '../../components/Button/Button';
+import Input from '../../components/Input/Input';
 
-import { MedFormProps } from "../../global";
+import { MedFormProps } from '../../global';
 
 const MedForm: React.FC<MedFormProps> = ({ activeMedication, onSubmit }) => {
-  const { handleSubmit, handleChange, resetForm, setFieldValue, values } = useFormik({
+  const {
+    handleSubmit, handleChange, resetForm, setFieldValue, values,
+  } = useFormik({
     initialValues: {
       name: '',
       ndc: '',
@@ -16,7 +18,7 @@ const MedForm: React.FC<MedFormProps> = ({ activeMedication, onSubmit }) => {
     },
     onSubmit(values) {
       onSubmit(values);
-    }
+    },
   });
 
   React.useEffect(() => {
@@ -33,21 +35,21 @@ const MedForm: React.FC<MedFormProps> = ({ activeMedication, onSubmit }) => {
     <form onSubmit={handleSubmit}>
       <label>Form:</label>
       <Input
-        name='form'
+        name="form"
         onChange={handleChange}
         value={values.form}
       />
       <br />
       <label>Strength:</label>
       <Input
-        name='strength'
+        name="strength"
         onChange={handleChange}
         value={values.strength}
       />
       <br />
-      <Button type='submit'>Submit</Button>
+      <Button type="submit">Submit</Button>
     </form>
   );
-}
+};
 
 export default MedForm;

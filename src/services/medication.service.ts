@@ -1,10 +1,10 @@
-import { medications } from "../data";
+import { medications } from '../data';
 import { MedicationData } from '../global';
 
 // Perform your AJAX calls inside of this service.
 export default class MedicationService {
   private async sleep(delay: number): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, delay));
+    return new Promise((resolve) => setTimeout(resolve, delay));
   }
 
   public async getMedicationDetails(ndc: number): Promise<MedicationData> {

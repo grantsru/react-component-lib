@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { HeaderProps } from "../../global";
+import { HeaderProps } from '../../global';
 
 const StyledHeader = styled.h1`
   text-decoration: underline;

@@ -1,4 +1,4 @@
-import {MedSelection} from "../global";
+import { MedSelection } from '../global';
 
 export const items: MedSelection[] = [
   {
@@ -13,7 +13,7 @@ export const items: MedSelection[] = [
   }, {
     ndc: 4,
     label: 'Codeine',
-  }
+  },
 ];
 
 export const medications = [
@@ -21,21 +21,21 @@ export const medications = [
     ndc: 1,
     name: 'Tylenol',
     form: 'tablet',
-    strength: '50mg'
+    strength: '50mg',
   }, {
     ndc: 2,
     name: 'Tums',
     form: 'tablet',
-    strength: '50mg'
+    strength: '50mg',
   }, {
     ndc: 3,
     name: 'Advil',
     form: 'pill',
-    strength: '100mg'
+    strength: '100mg',
   }, {
     ndc: 4,
     name: 'Codeine',
     form: 'liquid',
-    strength: '500mg'
-  }
+    strength: '500mg',
+  },
 ];
