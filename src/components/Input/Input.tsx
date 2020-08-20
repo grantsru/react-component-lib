@@ -1,9 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Input = styled.input`
-  background: #CCC;
-  color: #222;
-`;
+interface InputComponentProps {
+  name: string;
+  isPrimary: boolean;
+  onChange: any;
+  value: any;
+}
 
-export default Input;
+const InputComponent: React.FC<InputComponentProps> = (props) => {
+  const Input = styled.input`
+    background: ${props.isPrimary ? 'blue' : 'pink'};
+    color: #222;
+  `;
+
+  return (
+    <Input {...props} />
+  );
+};
+
+export default InputComponent;
