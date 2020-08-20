@@ -7,6 +7,10 @@ Local development:
 ```shell script
 yarn dev
 ```
+Run tests:
+```shell script
+yarn test
+```
 Build:
 ```shell script
 yarn build
