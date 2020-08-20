@@ -12,8 +12,8 @@
   "scripts": {
     "dev": "start-storybook -p 5000",
     "test": "jest",
-    "build": "webpack --mode production",
-    "storybook:build": "build-storybook"
+    "build": "build-storybook -c .storybook -o public",
+    "build:dist": "webpack --mode production"
   },
   "peerDependencies": {
     "react": ">=16.8.x",
