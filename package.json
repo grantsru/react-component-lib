@@ -43,6 +43,7 @@
   },
   "dependencies": {
     "downshift": "^6.0.5",
+    "formik": "^2.1.5",
     "styled-components": "^5.1.1"
   }
 }
