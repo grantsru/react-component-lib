@@ -5,7 +5,7 @@ import Header from '../../components/Header/Header';
 import MedForm from '../MedForm/MedForm';
 import MedSearch from '../MedSearch/MedSearch';
 
-import MedicationService from '../../services/medication.service';
+import MedicationService from '../../services/medication_service';
 
 import { MedSelection } from '../../global';
 
@@ -36,7 +36,7 @@ const Medication: React.FC<{}> = () => {
   }, [activeMedication]);
 
   return (
-    <Container>
+    <Container data-testid="medication-container">
       <Header title="Medication Form" />
       <MedSearch onMedicationChange={handleMedicationChange} />
       <MedForm activeMedication={activeMedication} onSubmit={handleFormSubmit} />
