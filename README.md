@@ -5,7 +5,7 @@ An example component library built with React, Webpack, TypeScript, tested with 
 
 Local development:
 ```shell script
-yarn storybook
+yarn dev
 ```
 Build:
 ```shell script

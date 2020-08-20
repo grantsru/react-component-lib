@@ -1,11 +1,13 @@
 import React from 'react';
+import styled from 'styled-components';
 
+import Container from "../../components/Container/Container";
+import Header from "../../components/Header/Header";
 import MedSearch from "../MedSearch/MedSearch";
 
 import MedicationService from "../../services/medication.service";
 
 import { MedSelection } from "../../global";
-import './Medication.scss';
 
 const Medication: React.FC<{}> = () => {
   const [activeMedication, setActiveMedication] = React.useState(null);
@@ -21,9 +23,10 @@ const Medication: React.FC<{}> = () => {
   }, [activeMedication]);
 
   return (
-    <div className='medication-container'>
+    <Container>
+      <Header title='Medication Form' />
       <MedSearch onMedicationChange={handleMedicationChange} />
-    </div>
+    </Container>
   );
 };
 

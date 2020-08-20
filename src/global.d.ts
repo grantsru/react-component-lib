@@ -1,3 +1,7 @@
+export interface HeaderProps {
+  title: string;
+}
+
 export interface MedSelection {
   label: string;
   ndc: number;
