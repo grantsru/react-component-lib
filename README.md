@@ -1,4 +1,4 @@
-# React Component Lib
+# ⚛️ React Component Lib
 An example component library built with React, Webpack, TypeScript, tested with Jest/Testing Library and displayed with Storybook.
 
 ### Scripts
