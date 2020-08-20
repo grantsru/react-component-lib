@@ -23,4 +23,4 @@ Build Storybook static files:
 yarn build
 ```
 
-In order to distribute changes, you must run the `build` command and commit the changes to the repository. For any change that constitutes a version change, merge it into `master` and set a release or tag.
+In order to distribute changes, you must run the `build:dist` command and commit the changes to the repository. For any change that constitutes a version change, merge it into `master` and set a release or tag.
