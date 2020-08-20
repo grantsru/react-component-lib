@@ -1,4 +1,4 @@
-import { MedSelection } from "../global";
+import { MedSelection } from '../global';
 export declare const items: MedSelection[];
 export declare const medications: {
     ndc: number;
