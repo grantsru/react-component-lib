@@ -3,6 +3,12 @@ import { MedicationData } from '../global';
 
 // Perform your AJAX calls inside of this service.
 export default class MedicationService {
+  private readonly medServiceApiUrl;
+
+  constructor(medServiceApiUrl: string) {
+    this.medServiceApiUrl = medServiceApiUrl;
+  }
+
   private async sleep(delay: number): Promise<void> {
     return new Promise((resolve) => setTimeout(resolve, delay));
   }

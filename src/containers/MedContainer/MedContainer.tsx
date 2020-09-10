@@ -9,10 +9,10 @@ import MedicationService from '../../services/medication_service';
 
 import { MedSelection } from '../../global';
 
-const MedContainer: React.FC<{}> = () => {
+const MedContainer: React.FunctionComponent<{ medServiceApiUrl: string }> = (props) => {
   const [activeMedication, setActiveMedication] = React.useState(null);
 
-  const medicationService = new MedicationService();
+  const medicationService = new MedicationService(props.medServiceApiUrl);
 
   async function handleMedicationChange(medication: MedSelection): Promise<void> {
     try {

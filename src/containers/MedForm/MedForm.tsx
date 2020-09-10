@@ -33,7 +33,6 @@ const MedForm: React.FC<MedFormProps> = ({ activeMedication, onSubmit }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label>Form:</label>
       <Input
         name="form"
         isPrimary={true}
