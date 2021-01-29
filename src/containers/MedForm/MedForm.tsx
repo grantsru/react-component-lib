@@ -38,14 +38,16 @@ const MedForm: React.FC<MedFormProps> = ({ activeMedication, onSubmit }) => {
         isPrimary={true}
         onChange={handleChange}
         value={values.form}
+        disabled
       />
       <br />
       <label>Strength:</label>
       <Input
         name="strength"
-        isPrimary={false}
+        isPrimary={true}
         onChange={handleChange}
         value={values.strength}
+        disabled
       />
       <br />
       <Button type="submit">Submit</Button>

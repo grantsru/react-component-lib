@@ -6,12 +6,17 @@ interface InputComponentProps {
   isPrimary: boolean;
   onChange: any;
   value: any;
+  disabled: boolean;
 }
 
 const InputComponent: React.FC<InputComponentProps> = (props) => {
   const Input = styled.input`
-    background: ${props.isPrimary ? 'blue' : 'pink'};
+    box-shadow: -2px -2px 0 ${props.isPrimary ? '#ff00eb4f' : '#00ffb896'};
+    border: none;
     color: #222;
+    &:focus {
+      outline: none;
+    }
   `;
 
   return (
