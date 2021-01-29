@@ -3,10 +3,10 @@ import Downshift from 'downshift';
 
 import { items } from '../../data';
 import { MedSearchProps } from '../../global';
-import Input from "../../components/Input/Input";
 
 const MedSearch: React.FC<MedSearchProps> = ({ onMedicationChange }) => (
   <Downshift
+
     onChange={onMedicationChange}
     itemToString={(item) => (item ? item.label : '')}
   >
@@ -26,7 +26,8 @@ const MedSearch: React.FC<MedSearchProps> = ({ onMedicationChange }) => (
           style={{ display: 'inline-block' }}
           {...getRootProps({ refKey: 'ref' }, { suppressRefError: true })}
         >
-          <Input name="search" {...getInputProps()} />
+          <label {...getLabelProps()}>Search for a medication: </label>
+          <input {...getInputProps()} />
         </div>
         <ul {...getMenuProps()}>
           {isOpen

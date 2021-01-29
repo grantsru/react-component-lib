@@ -8,6 +8,7 @@ import MedSearch from '../MedSearch/MedSearch';
 import MedicationService from '../../services/medication_service';
 
 import { MedSelection } from '../../global';
+import Divider from "../../components/Divider/Divider";
 
 const MedContainer: React.FunctionComponent<{ medServiceApiUrl?: string }> = (props) => {
   const [activeMedication, setActiveMedication] = React.useState(null);
@@ -42,6 +43,7 @@ const MedContainer: React.FunctionComponent<{ medServiceApiUrl?: string }> = (pr
     <Box data-testid="medication-container">
       <Header title="Medication Form" />
       <MedSearch onMedicationChange={handleMedicationChange} />
+      <Divider />
       <MedForm activeMedication={activeMedication} onSubmit={handleFormSubmit} />
     </Box>
   );

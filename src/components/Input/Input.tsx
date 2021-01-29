@@ -3,27 +3,29 @@ import styled from 'styled-components';
 
 interface InputComponentProps {
   name: string;
-  isPrimary: boolean;
   onChange: any;
   value: any;
-  disabled: boolean;
+  label?: string;
+  isPrimary?: boolean;
+  disabled?: boolean;
 }
 
 const InputComponent: React.FC<InputComponentProps> = (props) => {
   const Input = styled.input`
-    box-shadow: -2px -2px 0 ${props.isPrimary ? '#ff00eb4f' : '#00ffb896'};
+    box-shadow: -1px -1px 0 ${props.isPrimary ? '#ff00eb4f' : '#00ffb896'}, 1px 1px 0 #EEE;
     border: none;
-    color: #222;
+    color: #ff00eb4f;
+    text-shadow: 1px 1px 0 #00ffb896;
     &:focus {
       outline: none;
     }
   `;
 
   return (
-    <div>
-      <label>{props.name?.toUpperCase()}: </label>
+    <>
+      <label>{props.label?.toUpperCase() || props.name?.toUpperCase()}: </label>
       <Input {...props} />
-    </div>
+    </>
   );
 };
 
