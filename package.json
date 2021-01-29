@@ -9,9 +9,6 @@
   "files": [
     "dist"
   ],
-  "engines": {
-    "node": ">=10.x"
-  },
   "scripts": {
     "dev": "start-storybook -p 5000",
     "test": "jest",
