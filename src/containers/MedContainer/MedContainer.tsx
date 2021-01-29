@@ -11,16 +11,21 @@ import { MedSelection } from '../../global';
 import Divider from "../../components/Divider/Divider";
 
 const MedContainer: React.FunctionComponent<{ medServiceApiUrl?: string }> = (props) => {
+  const [isLoading, setLoading] = React.useState(false);
   const [activeMedication, setActiveMedication] = React.useState(null);
 
   const medicationService = new MedicationService(props.medServiceApiUrl);
 
   async function handleMedicationChange(medication: MedSelection): Promise<void> {
+    setLoading(true);
+
     try {
       const result = medication && await medicationService.getMedicationDetails(medication.ndc);
       setActiveMedication(result);
     } catch (err) {
       console.error(err);
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -42,7 +47,7 @@ const MedContainer: React.FunctionComponent<{ medServiceApiUrl?: string }> = (pr
   return (
     <Box data-testid="medication-container">
       <Header title="Medication Form" />
-      <MedSearch onMedicationChange={handleMedicationChange} />
+      <MedSearch onMedicationChange={handleMedicationChange} isLoading={isLoading} />
       <Divider />
       <MedForm activeMedication={activeMedication} onSubmit={handleFormSubmit} />
     </Box>

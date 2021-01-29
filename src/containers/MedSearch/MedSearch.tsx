@@ -9,7 +9,7 @@ const List = styled.ul`
   list-style: none;
 `;
 
-const MedSearch: React.FC<MedSearchProps> = ({ onMedicationChange }) => (
+const MedSearch: React.FC<MedSearchProps> = ({ isLoading, onMedicationChange }) => (
   <Downshift
     onChange={onMedicationChange}
     itemToString={(item) => (item ? item.label : '')}
@@ -31,7 +31,7 @@ const MedSearch: React.FC<MedSearchProps> = ({ onMedicationChange }) => (
           {...getRootProps({ refKey: 'ref' }, { suppressRefError: true })}
         >
           <label {...getLabelProps()}>Search for a medication: </label>
-          <input {...getInputProps()} />
+          <input {...getInputProps()} disabled={isLoading} />
         </div>
         <List {...getMenuProps()}>
           {isOpen

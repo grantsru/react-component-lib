@@ -20,7 +20,6 @@ export default class MedicationService {
   }
 
   public async saveMedicationRecord(medication: MedicationData, patientId: string): Promise<void> {
-    await this.sleep(1000);
     window.alert(`Medication submission received for ${patientId}: ${JSON.stringify(medication)}`);
   }
 }
