@@ -13,6 +13,7 @@ export interface MedSelection {
 }
 
 export interface MedSearchProps {
+  isLoading: boolean;
   onMedicationChange: (selection: MedSelection) => void;
 }
 
