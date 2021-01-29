@@ -22,12 +22,11 @@ const MedSearch: React.FC<MedSearchProps> = ({ onMedicationChange }) => (
       getRootProps,
     }) => (
       <div>
-        <label {...getLabelProps()}>Search: </label>
         <div
           style={{ display: 'inline-block' }}
           {...getRootProps({ refKey: 'ref' }, { suppressRefError: true })}
         >
-          <Input {...getInputProps()} />
+          <Input name="search" {...getInputProps()} />
         </div>
         <ul {...getMenuProps()}>
           {isOpen

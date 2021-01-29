@@ -20,7 +20,10 @@ const InputComponent: React.FC<InputComponentProps> = (props) => {
   `;
 
   return (
-    <Input {...props} />
+    <div>
+      <label>{props.name?.toUpperCase()}: </label>
+      <Input {...props} />
+    </div>
   );
 };
 

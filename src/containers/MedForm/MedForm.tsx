@@ -41,7 +41,6 @@ const MedForm: React.FC<MedFormProps> = ({ activeMedication, onSubmit }) => {
         disabled
       />
       <br />
-      <label>Strength:</label>
       <Input
         name="strength"
         isPrimary={true}
