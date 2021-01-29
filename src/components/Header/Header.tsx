@@ -6,6 +6,7 @@ import { HeaderProps } from '../../global';
 const StyledHeader = styled.h1`
   color: #ff00eb4f;
   text-shadow: 2px 2px 0 #00ffb896;
+  font-family: system-ui, fantasy;
 `;
 
 const Header: React.FC<HeaderProps> = ({ title }) => <StyledHeader>{title}</StyledHeader>;

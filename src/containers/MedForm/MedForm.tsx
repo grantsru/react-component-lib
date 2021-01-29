@@ -1,10 +1,16 @@
 import React from 'react';
+import styled from 'styled-components';
 import { useFormik } from 'formik';
 
 import Button from '../../components/Button/Button';
 import Input from '../../components/Input/Input';
 
 import { MedFormProps } from '../../global';
+
+const Form = styled.form`
+  padding: 20px;
+  text-align: right;
+`;
 
 const MedForm: React.FC<MedFormProps> = ({ activeMedication, onSubmit }) => {
   const {
@@ -32,7 +38,7 @@ const MedForm: React.FC<MedFormProps> = ({ activeMedication, onSubmit }) => {
   }, [activeMedication]);
 
   return (
-    <form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}>
       <Input
         name="form"
         isPrimary={true}
@@ -49,8 +55,8 @@ const MedForm: React.FC<MedFormProps> = ({ activeMedication, onSubmit }) => {
         disabled
       />
       <br />
-      <Button type="submit">Submit</Button>
-    </form>
+      <Button type="submit" disabled={!activeMedication}>Submit</Button>
+    </Form>
   );
 };
 

@@ -1,12 +1,16 @@
 import React from 'react';
 import Downshift from 'downshift';
+import styled from 'styled-components';
 
 import { items } from '../../data';
 import { MedSearchProps } from '../../global';
 
+const List = styled.ul`
+  list-style: none;
+`;
+
 const MedSearch: React.FC<MedSearchProps> = ({ onMedicationChange }) => (
   <Downshift
-
     onChange={onMedicationChange}
     itemToString={(item) => (item ? item.label : '')}
   >
@@ -21,7 +25,7 @@ const MedSearch: React.FC<MedSearchProps> = ({ onMedicationChange }) => (
       selectedItem,
       getRootProps,
     }) => (
-      <div>
+      <>
         <div
           style={{ display: 'inline-block' }}
           {...getRootProps({ refKey: 'ref' }, { suppressRefError: true })}
@@ -29,7 +33,7 @@ const MedSearch: React.FC<MedSearchProps> = ({ onMedicationChange }) => (
           <label {...getLabelProps()}>Search for a medication: </label>
           <input {...getInputProps()} />
         </div>
-        <ul {...getMenuProps()}>
+        <List {...getMenuProps()}>
           {isOpen
             ? items
               .filter((item) => !inputValue || item.label.includes(inputValue))
@@ -50,8 +54,8 @@ const MedSearch: React.FC<MedSearchProps> = ({ onMedicationChange }) => (
                 </li>
               ))
             : null}
-        </ul>
-      </div>
+        </List>
+      </>
     )}
   </Downshift>
 );

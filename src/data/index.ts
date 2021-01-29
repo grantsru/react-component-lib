@@ -3,38 +3,38 @@ import { MedSelection } from '../global';
 export const items: MedSelection[] = [
   {
     ndc: 1,
-    label: 'Tylenol',
+    label: 'tylenol',
   }, {
     ndc: 2,
-    label: 'Tums',
+    label: 'tums',
   }, {
     ndc: 3,
-    label: 'Advil',
+    label: 'advil',
   }, {
     ndc: 4,
-    label: 'Codeine',
+    label: 'codeine',
   },
 ];
 
 export const medications = [
   {
     ndc: 1,
-    name: 'Tylenol',
+    name: 'tylenol',
     form: 'tablet',
     strength: '50mg',
   }, {
     ndc: 2,
-    name: 'Tums',
+    name: 'tums',
     form: 'tablet',
     strength: '50mg',
   }, {
     ndc: 3,
-    name: 'Advil',
+    name: 'advil',
     form: 'pill',
     strength: '100mg',
   }, {
     ndc: 4,
-    name: 'Codeine',
+    name: 'codeine',
     form: 'liquid',
     strength: '500mg',
   },

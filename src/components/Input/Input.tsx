@@ -13,9 +13,8 @@ interface InputComponentProps {
 const InputComponent: React.FC<InputComponentProps> = (props) => {
   const Input = styled.input`
     box-shadow: -1px -1px 0 ${props.isPrimary ? '#ff00eb4f' : '#00ffb896'}, 1px 1px 0 #EEE;
+    margin: 4px 0;
     border: none;
-    color: #ff00eb4f;
-    text-shadow: 1px 1px 0 #00ffb896;
     &:focus {
       outline: none;
     }
